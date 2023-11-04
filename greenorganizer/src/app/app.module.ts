@@ -8,6 +8,7 @@ import { SourcesComponent } from './sources/sources.component';
 import { AboutComponent } from './about/about.component';
 import { ResultComponent } from './calculate/result/result.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     CalculateComponent,
     SourcesComponent,
     AboutComponent,
-    ResultComponent
+    ResultComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
