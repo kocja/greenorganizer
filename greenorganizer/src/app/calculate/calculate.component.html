@@ -1,6 +1,36 @@
 <div class="card rounded custom-card">
   <div class="card-body">
-    <h5 class="card-title">Section 1</h5>
-    <p class="card-text">Content for Section 1 goes here.</p>
+    <h5 class="card-title">Neues Kleidungsstück hinzufügen</h5>
+    <p class="card-text">Füll deinen Kleiderschaft mit neuen Kleidungsstücken.</p>
+    <form [formGroup]="clothingForm" (ngSubmit)="onSubmit()">
+      <select class="form-select" [formControlName]="'type'">
+        <option selected disabled>Kleidungsart auswählen</option>
+        <option value="Jacke">Jacke</option>
+        <option value="Shirt">Shirt</option>
+        <option value="Hose">Hose</option>
+        <option value="Schuhe">Schuhe</option>
+        <option value="Accessoire">Accessoire</option>
+        <option value="Accessoire">Accessoire</option>
+      </select>
+      <select class="form-select mt-2" aria-label="Default select example" [formControlName]="'brand'">
+        <option selected disabled>Marke auswählen</option>
+        <option value="Zara">Zara</option>
+        <option value="H&M">H&M</option>
+        <option value="Gucci">Gucci</option>
+        <option value="Rework">Rework</option>
+        <option value="Shein">Shein</option>
+      </select>
+      <select class="form-select mt-2" aria-label="Default select example" [formControlName]="'age'">
+        <option selected disabled>Alter auswählen</option>
+        <option value="weniger als 1 Monat">weniger als 1 Monat</option>
+        <option value="weniger als 1 Jahr">weniger als 1 Jahr</option>
+        <option value="1-2 Jahre">1-2 Jahre</option>
+        <option value="2-3 Jahre">2-3 Jahre</option>
+        <option value="Älter als 3 Jahre">Älter als 3 Jahre</option>
+      </select>
+      <div class="container col text-center mt-2">
+        <button type="submit" class="btn btn-success">In meinen Kleiderschaft hinzufügen</button>
+      </div>
+    </form>
   </div>
 </div>

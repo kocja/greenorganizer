@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent {
+
+  @Input({ required: true }) result!: number;
+
 
 }

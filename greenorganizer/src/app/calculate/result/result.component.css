@@ -1,0 +1,38 @@
+.custom-card {
+  width: 400px;
+  margin: 3em;
+  border-color: white;
+  font-family: "ABC Diatype", sans-serif;
+}
+
+img {
+  margin: 2.5em;
+  width: 300px;
+}
+
+.neutral {
+  background: #efefef;
+}
+
+.good {
+  background: #dff3dd;
+}
+.good a {
+  color: darkgreen;
+}
+
+.sufficient {
+  background: #ffcdae;
+}
+
+.sufficient a {
+  color: darkorange;
+}
+
+.bad {
+  background: #ffaeae;
+}
+
+.bad a {
+  color: darkred;
+}

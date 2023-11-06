@@ -1,1 +1,42 @@
-<p>result works!</p>
+<ng-container *ngIf="result == 0">
+  <div class="card rounded custom-card neutral">
+    <div class="card-body">
+      <p>Jetzt Kleider in den Kleiderschaft hinzufügen und auf dem berechnen Knopf ausrechnen lassen!</p>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="result < 3 && result != 0">
+  <div class="card rounded custom-card good">
+    <div class="card-body">
+      <h4 class="card-title">Dein Resultat</h4>
+      <img src="assets/good.png">
+      <h5 class="card-title" style="font-weight: bold">Gut</h5>
+      <p class="card-text">Hey, ich wollte nur kurz über deinen Kleiderschrank sprechen. Es ist wirklich toll, dass du dich für nachhaltige Mode entscheidest und bereits einige umweltfreundliche Stücke besitzt. Aber denkst du nicht auch, dass wir noch besser werden könnten? Vielleicht könnten wir alte Kleidungsstücke recyceln oder mehr Second-Hand-Shopping in Betracht ziehen, um unseren ökologischen Fussabdruck weiter zu reduzieren.</p>
+      <a href="/about">Hier mehr erfahren</a>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="result == 2">
+  <div class="card rounded custom-card sufficient">
+    <div class="card-body">
+      <h4 class="card-title">Dein Resultat</h4>
+      <img src="assets/mittel.png">
+      <h5 class="card-title" style="font-weight: bold">Zufriedenstellend</h5>
+      <p class="card-text">Hey, ich weiss, dass du hin und wieder nachhaltige Entscheidungen triffst, und das ist super! Aber wie wäre es, wenn wir unsere Anstrengungen verstärken und Nachhaltigkeit zu einem festen Bestandteil unseres Lebens machen? Vielleicht könnten wir öfter auf umweltfreundliche Optionen achten und bewusster konsumieren, um insgesamt einen grösseren Beitrag zum Umweltschutz zu leisten. </div>
+  <a href="/about">Hier mehr erfahren</a>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="result > 3">
+  <div class="card rounded custom-card bad">
+    <div class="card-body">
+      <h4 class="card-title">Dein Resultat</h4>
+      <img src="assets/schlecht.png">
+      <h5 class="card-title" style="font-weight: bold">Schlecht</h5>
+      <p class="card-text">Hey, ich verstehe, dass Nachhaltigkeit beim Kleiderkauf nicht immer an erster Stelle steht. Aber was hältst du davon, wenn wir darüber nachdenken, unsere Gewohnheiten zu ändern und gelegentlich nachhaltige Kleidung in Betracht ziehen? Es könnte eine Möglichkeit sein, unseren ökologischen Fussabdruck zu verringern und einen positiven Beitrag zum Umweltschutz zu leisten. Wir könnten anfangen, uns über umweltfreundliche Materialien und Herstellungsprozesse zu informieren und diese in unsere Kaufentscheidungen einbeziehen. Jede kleine Anstrengung zählt!</p>
+      <a href="/about">Hier mehr erfahren</a>
+    </div>
+  </div>
+</ng-container>
