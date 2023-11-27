@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './list/item/item.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { CheckComponent } from './start/check/check.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ResultComponent,
     HeaderComponent,
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    CheckComponent
   ],
     imports: [
         BrowserModule,

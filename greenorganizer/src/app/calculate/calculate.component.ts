@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
@@ -8,7 +8,10 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class CalculateComponent implements OnInit{
 
+  @Output()
   closet: any[] = []; // Initialize an array to hold clothing items
+
+
   clothingForm: FormGroup; // Initialize the clothing form
 
   constructor(private formBuilder: FormBuilder) {

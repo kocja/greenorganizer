@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+html #1 {
+  background: #d6dccc;
+}
+
+
+body{
+  background: #eff2e9 !important;
+}

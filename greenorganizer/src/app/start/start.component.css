@@ -1,0 +1,27 @@
+h1 {
+  font-family: "Mshtakan", serif;
+  font-size: 72px;
+  color: #3b403b;
+
+  letter-spacing: 2px;
+}
+h3 {
+  font-family: "Kailasa", serif;
+  font-size: 40px;
+  color: #3b403b;
+  letter-spacing: 0.5px;
+}
+
+hr {
+  margin-left: 40em;
+  margin-right: 40em;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set your desired text color */
+}
+
+.text-center {
+  margin-top: 13em;
+}
