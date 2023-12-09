@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {ClothingService} from "../clothing.service";
 
 @Component({
   selector: 'app-calculate',
@@ -14,7 +15,8 @@ export class CalculateComponent implements OnInit{
 
   clothingForm: FormGroup; // Initialize the clothing form
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,
+  private clothingService: ClothingService) {
     // Create the clothing form with form controls
     this.clothingForm = this.formBuilder.group({
       type: [Validators.required],
@@ -38,6 +40,18 @@ export class CalculateComponent implements OnInit{
         };
         this.closet.push(newClothing);
         console.log(this.closet);
+        this.clothingForm.reset();
+      }
+
+      if (typeValue !== null && brandValue !== null && ageValue !== null) {
+        const newClothing = {
+          type: typeValue,
+          brand: brandValue,
+          age: ageValue
+        };
+
+        // Use the service to add the new clothing item
+        this.clothingService.addToCloset(newClothing);
         this.clothingForm.reset();
       }
     }

@@ -8,8 +8,8 @@ import { Component, Input, numberAttribute, booleanAttribute } from '@angular/co
 })
 export class ItemComponent {
 
-  @Input({ required: true }) type!: string;
-  @Input({ required: true }) brand!: string;
-  @Input({ required: true }) age!: string;
+  @Input() type: string | undefined;
+  @Input() brand: string | undefined;
+  @Input() age: string | undefined;
 
 }

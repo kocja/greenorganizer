@@ -1,4 +1,6 @@
-<app-item [type]="'Hose'" [brand]="'H&M'" [age]="'weniger als 1 Jahr'" ></app-item>
+<div *ngFor="let item of closet">
+  <app-item [type]="item.type" [brand]="item.brand" [age]="item.age"></app-item>
+</div>
 
 <div class="container col text-center mt-2">
   <button type="button" class="btn btn-success">Kleiderschaft ausrechnen</button>

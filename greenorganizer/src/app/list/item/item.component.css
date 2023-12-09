@@ -1,6 +1,9 @@
 .custom-card {
-  margin: 3em;
   background-color: #d6dccc;
   border-color: #eff2e9;
   font-family: "ABC Diatype", sans-serif;
+}
+
+p {
+  margin-bottom: 0 !important;
 }
