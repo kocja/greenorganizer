@@ -12,17 +12,14 @@ export class CalculateComponent implements OnInit{
   @Output()
   closet: any[] = []; // Initialize an array to hold clothing items
 
-
   clothingForm: FormGroup; // Initialize the clothing form
-  selectedAge = null; // or undefined
 
   constructor(private formBuilder: FormBuilder,
   private clothingService: ClothingService) {
-    // Create the clothing form with form controls
     this.clothingForm = this.formBuilder.group({
       type: ['Kleidungsart auswählen', Validators.required],
       brand: ['Marke auswählen', Validators.required],
-      age: ['Alter auswählen', Validators.required],
+      age: ['Alter auswählen', Validators.required]
     });
   }
 
@@ -60,7 +57,6 @@ export class CalculateComponent implements OnInit{
 
   resetForm(){
     this.clothingForm.reset();
-    this.selectedAge = null; // or undefined
   }
 
   ngOnInit(): void {
