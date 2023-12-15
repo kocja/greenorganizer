@@ -14,4 +14,8 @@ export class ClothingService {
     const updatedCloset = [...currentCloset, newClothing];
     this.closetSource.next(updatedCloset);
   }
+
+  getClosetLength(): number {
+    return this.closetSource.value.length;
+  }
 }
