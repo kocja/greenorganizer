@@ -12,7 +12,7 @@
         <option value="Accessoire">Accessoire</option>
         <option value="Accessoire">Hut</option>
       </select>
-      <select class="form-select mt-2" aria-label="Default select example" [formControlName]="'brand'">
+      <select class="form-select mt-2" [formControlName]="'brand'">
         <option selected disabled>Marke auswählen</option>
         <option value="Zara">Zara</option>
         <option value="H&M">H&M</option>
@@ -20,7 +20,7 @@
         <option value="Rework">Rework</option>
         <option value="Shein">Shein</option>
       </select>
-      <select class="form-select mt-2" aria-label="Default select example">
+      <select class="form-select mt-2" [formControlName]="'age'">
         <option value="" disabled selected hidden>Alter auswählen</option>
         <option value="weniger als 1 Monat">weniger als 1 Monat</option>
         <option value="weniger als 1 Jahr">weniger als 1 Jahr</option>

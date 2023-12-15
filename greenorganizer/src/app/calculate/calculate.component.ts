@@ -13,9 +13,9 @@ export class CalculateComponent implements OnInit{
   closet: any[] = []; // Initialize an array to hold clothing items
 
   clothingForm: FormGroup; // Initialize the clothing form
-
   constructor(private formBuilder: FormBuilder,
   private clothingService: ClothingService) {
+    // Create the clothing form with form controls
     this.clothingForm = this.formBuilder.group({
       type: ['Kleidungsart auswählen', Validators.required],
       brand: ['Marke auswählen', Validators.required],
@@ -38,7 +38,7 @@ export class CalculateComponent implements OnInit{
         };
         this.closet.push(newClothing);
         console.log(this.closet);
-        this.resetForm();
+        this.clothingForm.reset();
       }
 
       if (typeValue !== null && brandValue !== null && ageValue !== null) {
@@ -50,13 +50,9 @@ export class CalculateComponent implements OnInit{
 
         // Use the service to add the new clothing item
         this.clothingService.addToCloset(newClothing);
-        this.resetForm();
+        this.clothingForm.reset();
       }
     }
-  }
-
-  resetForm(){
-    this.clothingForm.reset();
   }
 
   ngOnInit(): void {
