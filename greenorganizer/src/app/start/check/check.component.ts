@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./check.component.css']
 })
 export class CheckComponent {
-
 }
