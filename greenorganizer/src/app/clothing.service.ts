@@ -12,22 +12,43 @@ export class ClothingService {
   brandScores: { [brand: string]: number } = {
     'Adidas': 4,
     'Bershka': 5,
-    'H&M': 3,
+    'Forever21': 1,
+    'H&M': 2,
     'Mango': 4,
-    'Nike': 4,
+    'Nike': 3,
     'Patagonia': 5,
     'Primark': 2,
-    'Pull & Bear': 3,
+    'Pull & Bear': 2,
     'Rework': 5,
     'Shein': 1,
     'Stradivarius': 2,
-    'The North Face': 3,
-    'Tommy Hilfiger': 3,
-    'Topshop': 2,
+    'Topshop': 3,
     'Veja': 5,
-    'Zara': 2,
-    'andere Secondhand-Marke': 4,
+    'Zara': 3,
+    'Secondhand-Marke': 4,
     'andere Fast-Fashion Marke': 4,
+  };
+
+  typeScore: { [brand: string]: number } = {
+    'Shirt (konv. Baumwolle)': 1,
+    'Shirt (Bio-Baumwolle)': 3,
+    'Jeans (konv. Baumwolle)': 1,
+    'Jeans (Tencel)': 4,
+    'Hose (konv. Baumwolle)': 4,
+    'Schuhe': 2,
+    'Accessoire': 4,
+    'Jacke (Daunen)': 3,
+    'Jacke (Leder)': 1,
+    'andere': 1,
+  };
+
+  ageScore: { [brand: string]: number } = {
+    'weniger als 1 Monat': 1,
+    'weniger als 6 Monate': 2,
+    'weniger als 1 Jahr': 3,
+    '1-2 Jahre': 4,
+    '2-3 Jahre': 5,
+    'Älter als 3 Jahre': 5
   };
 
   addToCloset(newClothing: any) {
@@ -39,13 +60,31 @@ export class ClothingService {
   calculateSustainabilityScore(): number {
     const closet = this.closetSource.value;
 
-    // Your logic to calculate the sustainability score based on brandScores
+    // Your logic to calculate the sustainability score based on brandScores, typeScore, and ageScore
     const totalScore = closet.reduce((sum, item) => {
       const brand = item.brand;
-      return sum + (this.brandScores[brand] || 0);
+      const type = item.type;
+      const age = item.age;
+
+      // Consider type and age scores in the calculation
+      const brandScore = this.brandScores[brand] || 0;
+      const typeScore = this.typeScore[type] || 0;
+      const ageScore = this.ageScore[age] || 0;
+
+      return sum + brandScore + typeScore + ageScore;
     }, 0);
 
-    // Calculate average sustainability score
-    return closet.length > 0 ? totalScore / closet.length : 0;
+    // Define numerical ranges for sustainability scores
+    const highRange = 30; // Adjust as needed based on your criteria
+    const middleRange = 20; // Adjust as needed based on your criteria
+
+    // Categorize the total sustainability score numerically
+    if (totalScore >= highRange) {
+      return 5; // The highest sustainability
+    } else if (totalScore >= middleRange) {
+      return 3; // Medium sustainability
+    } else {
+      return 1; // The lowest sustainability
+    }
   }
 }

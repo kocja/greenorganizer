@@ -3,19 +3,11 @@
     <h5 class="card-title">Neues Kleidungsstück hinzufügen</h5>
     <p class="card-text">Füll deinen Kleiderschaft mit neuen Kleidungsstücken.</p>
     <form [formGroup]="clothingForm" (ngSubmit)="onSubmit()">
-      <select class="form-select" [formControlName]="'type'">
-        <option selected disabled>Kleidungsart auswählen</option>
-        <option value="Jacke">Jacke</option>
-        <option value="T-Shirt">T-Shirt</option>
-        <option value="Hose">Hose</option>
-        <option value="Jeans">Jeans</option>
-        <option value="Schuhe">Schuhe</option>
-        <option value="Accessoire">Accessoire</option>
-      </select>
       <select class="form-select mt-2" [formControlName]="'brand'">
         <option selected disabled>Marke auswählen</option>
         <option value="Adidas">Adidas</option>
         <option value="Bershka">Bershka</option>
+        <option value="Forever21">Forever21</option>
         <option value="H&M">H&M</option>
         <option value="Mango">Mango</option>
         <option value="Nike">Nike</option>
@@ -25,17 +17,29 @@
         <option value="Rework">Rework</option>
         <option value="Shein">Shein</option>
         <option value="Stradivarius">Stradivarius</option>
-        <option value="The North Face">The North Face</option>
-        <option value="Tommy Hilfiger">Tommy Hilfiger</option>
         <option value="Topshop">Topshop</option>
         <option value="Veja">Veja</option>
         <option value="Zara">Zara</option>
-        <option value="andere Secondhand-Marke">andere Secondhand-Marke</option>
+        <option value="Secondhand-Marke">Secondhand-Marke</option>
         <option value="andere Fast-Fashion Marke">andere Fast-Fashion Marke</option>
+      </select>
+      <select class="form-select mt-2" [formControlName]="'type'">
+        <option selected disabled>Kleidungsart auswählen</option>
+        <option value="Shirt (konv. Baumwolle)">Shirt (konv. Baumwolle)</option>
+        <option value="Shirt (Bio-Baumwolle)">Shirt (Bio-Baumwolle)</option>
+        <option value="Jeans (konv. Baumwolle)">Jeans (konv. Baumwolle)</option>
+        <option value="Jeans (Tencel)">Jeans (Tencel)</option>
+        <option value="Jacke (Daunen)">Jacke (Daunen)</option>
+        <option value="Jacke (Leder)">Jacke (Leder)</option>
+        <option value="Hose (konv. Baumwolle)">Hose (konv. Baumwolle)</option>
+        <option value="Schuhe">Schuhe</option>
+        <option value="Accessoire">Accessoire</option>
+       <option value="andere">andere</option>
       </select>
       <select class="form-select mt-2" [formControlName]="'age'">
         <option value="Alter auswählen" disabled selected>Alter auswählen</option>
         <option value="weniger als 1 Monat">weniger als 1 Monat</option>
+        <option value="weniger als 6 Monate">weniger als 6 Monate</option>
         <option value="weniger als 1 Jahr">weniger als 1 Jahr</option>
         <option value="1-2 Jahre">1-2 Jahre</option>
         <option value="2-3 Jahre">2-3 Jahre</option>
