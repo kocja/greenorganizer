@@ -11,7 +11,6 @@ export class ListComponent implements OnInit, OnDestroy {
   @Output() calculateClicked: EventEmitter<number> = new EventEmitter<number>();
 
   closet: any[] = [];
-  fastFashionBrands = ['Bershka', 'H&M', 'Zara'];
   private subscription: Subscription = new Subscription();
 
   constructor(private clothingService: ClothingService) {}
@@ -27,17 +26,17 @@ export class ListComponent implements OnInit, OnDestroy {
   }
 
   calculate() {
-    // Move the array definition before using it
-    const fastFashionBrands = ['Bershka', 'H&M', 'Zara'];
-    const fastFashionItems = this.closet.filter(item => fastFashionBrands.includes(item.brand));
-    this.calculateClicked.emit(fastFashionItems.length);
+    const sustainabilityScore = this.clothingService.calculateSustainabilityScore();
+    this.calculateClicked.emit(sustainabilityScore);
 
-    if (fastFashionItems.length === 0) {
-      console.log('Does not contain fast fashion.');
-    } else if (fastFashionItems.length === 1) {
-      console.log('Contains 1 fast fashion item.');
+    if (sustainabilityScore === 0) {
+      console.log('Does not contain sustainable items.');
+    } else if (sustainabilityScore === 1) {
+      console.log('Contains items with low sustainability.');
+    } else if (sustainabilityScore === 5) {
+      console.log('Contains items with high sustainability.');
     } else {
-      console.log(`Contains ${fastFashionItems.length} fast fashion items.`);
+      console.log(`Average sustainability score: ${sustainabilityScore}`);
     }
   }
 }

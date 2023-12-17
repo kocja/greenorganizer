@@ -13,7 +13,7 @@ export class ResultComponent implements OnInit {
   constructor(private clothingService: ClothingService) {}
 
   ngOnInit() {
-    this.closetLength = this.clothingService.getClosetLength();
+    this.closetLength = this.clothingService.calculateSustainabilityScore();
   }
 
 }
