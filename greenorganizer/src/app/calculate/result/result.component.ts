@@ -8,7 +8,7 @@ import {ClothingService} from "../../clothing.service";
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent implements OnInit {
-  closetLength: number = 0;
+  @Input() closetLength: number = 0;
 
   constructor(private clothingService: ClothingService) {}
 

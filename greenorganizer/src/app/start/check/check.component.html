@@ -4,8 +4,8 @@
   <hr>
   <div class="d-flex">
     <app-calculate class="flex-fill"></app-calculate>
-    <app-list class="flex-fill"></app-list>
-    <app-result class="flex-fill"></app-result>
+    <app-list class="flex-fill" (calculateClicked)="onCalculateClicked($event)"></app-list>
+    <app-result class="flex-fill" [closetLength]="result"></app-result>
   </div>
 </div>
 

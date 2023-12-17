@@ -1,7 +1,9 @@
 .custom-card {
-  background-color: #d6dccc;
-  border-color: #eff2e9;
+  background-color: #eff2e9;
+  border-color: #198754;
+  border-width: 0.1em;
   font-family: "ABC Diatype", sans-serif;
+  margin-top: 1em;
 }
 
 p {

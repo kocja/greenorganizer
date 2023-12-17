@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./check.component.css']
 })
 export class CheckComponent {
+  result!: number;
+
+  onCalculateClicked(result: number) {
+    this.result = result;
+  }
 }

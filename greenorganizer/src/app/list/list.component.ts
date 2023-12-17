@@ -1,14 +1,17 @@
-import {Component, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {ClothingService} from "../clothing.service";
-import {Subscription} from "rxjs";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { ClothingService } from '../clothing.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent  implements OnInit, OnDestroy {
+export class ListComponent implements OnInit, OnDestroy {
+  @Output() calculateClicked: EventEmitter<number> = new EventEmitter<number>();
+
   closet: any[] = [];
+  fastFashionBrands = ['Bershka', 'H&M', 'Zara'];
   private subscription: Subscription = new Subscription();
 
   constructor(private clothingService: ClothingService) {}
@@ -24,19 +27,15 @@ export class ListComponent  implements OnInit, OnDestroy {
   }
 
   calculate() {
-// Assuming this.closet is defined in your component
-
-// Array of fast fashion brands
-    const fastFashionBrands = ["Bershka", "H&M", "Zara"];
-
-// Filter items in this.closet that are fast fashion
+    // Move the array definition before using it
+    const fastFashionBrands = ['Bershka', 'H&M', 'Zara'];
     const fastFashionItems = this.closet.filter(item => fastFashionBrands.includes(item.brand));
+    this.calculateClicked.emit(fastFashionItems.length);
 
-// Log the result
     if (fastFashionItems.length === 0) {
-      console.log("Does not contain fast fashion.");
+      console.log('Does not contain fast fashion.');
     } else if (fastFashionItems.length === 1) {
-      console.log("Contains 1 fast fashion item.");
+      console.log('Contains 1 fast fashion item.');
     } else {
       console.log(`Contains ${fastFashionItems.length} fast fashion items.`);
     }
