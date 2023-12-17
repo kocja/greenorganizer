@@ -38,8 +38,11 @@ export class CalculateComponent implements OnInit{
         };
         this.closet.push(newClothing);
         console.log(this.closet);
-        this.clothingForm.reset();
-      }
+        this.clothingForm.reset({
+          type: 'Kleidungsart auswählen',
+          brand: 'Marke auswählen',
+          age: 'Alter auswählen'
+        });      }
 
       if (typeValue !== null && brandValue !== null && ageValue !== null) {
         const newClothing = {
@@ -50,8 +53,11 @@ export class CalculateComponent implements OnInit{
 
         // Use the service to add the new clothing item
         this.clothingService.addToCloset(newClothing);
-        this.clothingForm.reset();
-      }
+        this.clothingForm.reset({
+          type: 'Kleidungsart auswählen',
+          brand: 'Marke auswählen',
+          age: 'Alter auswählen'
+        });      }
     }
   }
 
