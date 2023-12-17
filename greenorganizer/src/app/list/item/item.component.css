@@ -6,6 +6,10 @@
   margin-top: 1em;
 }
 
+.custom-card:hover {
+  cursor: pointer;
+}
+
 p {
   margin-bottom: 0 !important;
 }

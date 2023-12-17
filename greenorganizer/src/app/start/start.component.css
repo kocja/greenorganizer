@@ -1,12 +1,13 @@
 h1 {
-  font-family: "Mshtakan", serif;
+  font-family: "ABC Arizona Serif", serif;
   font-size: 72px;
   color: #3b403b;
-
+  font-weight: lighter;
   letter-spacing: 2px;
 }
 h3 {
-  font-family: "Kailasa", serif;
+  font-family: "ABC Arizona Serif", serif;
+  font-weight: lighter;
   font-size: 40px;
   color: #3b403b;
   letter-spacing: 0.5px;
@@ -24,4 +25,24 @@ a {
 
 .text-center {
   margin-top: 13em;
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.fade-in-2 {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
