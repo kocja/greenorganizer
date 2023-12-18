@@ -74,17 +74,7 @@ export class ClothingService {
       return sum + brandScore + typeScore + ageScore;
     }, 0);
 
-    // Define numerical ranges for sustainability scores
-    const highRange = 30; // Adjust as needed based on your criteria
-    const middleRange = 20; // Adjust as needed based on your criteria
-
-    // Categorize the total sustainability score numerically
-    if (totalScore >= highRange) {
-      return 5; // The highest sustainability
-    } else if (totalScore >= middleRange) {
-      return 3; // Medium sustainability
-    } else {
-      return 1; // The lowest sustainability
-    }
+    return totalScore; // Return the totalScore directly
   }
+
 }
