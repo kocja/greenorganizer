@@ -8,9 +8,9 @@ import {SourcesComponent} from "./sources/sources.component";
 import {BrandsComponent} from "./sources/brands/brands.component";
 
 const routes: Routes = [
+  { path: '', component: StartComponent },
   { path: 'start', component: StartComponent },
   { path: 'check', component: CheckComponent },
-  { path: '', component: CheckComponent },
   { path: 'calculate', component: CalculateComponent },
   { path: 'team', component: SourcesComponent },
   { path: 'information', component: AboutComponent },
