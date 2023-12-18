@@ -74,7 +74,9 @@ export class ClothingService {
       return sum + brandScore + typeScore + ageScore;
     }, 0);
 
-    return totalScore; // Return the totalScore directly
-  }
+    // Calculate the average sustainability score per item
+    const averageScore = closet.length > 0 ? totalScore / closet.length : 0;
 
+    return averageScore;
+  }
 }
