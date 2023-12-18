@@ -6,7 +6,13 @@ nav {
   margin-left: 2em;
 }
 
-
 a {
   font-family: "ABC Diatype", sans-serif;
+}
+
+/* Adjust the spacing for the brand/logo on mobile */
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-right: 0; /* No margin on the right for the logo */
+  }
 }
