@@ -6,6 +6,10 @@ h1 {
   letter-spacing: 2px;
 }
 
+.redirect {
+  color: forestgreen !important;
+}
+
 h2 {
   font-family: "ABC Arizona Serif", serif;
   font-size: 22px;

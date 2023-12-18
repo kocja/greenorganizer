@@ -13,6 +13,7 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './list/item/item.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CheckComponent } from './start/check/check.component';
+import { BrandsComponent } from './sources/brands/brands.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CheckComponent } from './start/check/check.component';
     HeaderComponent,
     ListComponent,
     ItemComponent,
-    CheckComponent
+    CheckComponent,
+    BrandsComponent
   ],
     imports: [
         BrowserModule,

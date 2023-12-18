@@ -5,6 +5,7 @@ import {AboutComponent} from "./about/about.component";
 import {CalculateComponent} from "./calculate/calculate.component";
 import {CheckComponent} from "./start/check/check.component";
 import {SourcesComponent} from "./sources/sources.component";
+import {BrandsComponent} from "./sources/brands/brands.component";
 
 const routes: Routes = [
   { path: 'start', component: StartComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'calculate', component: CalculateComponent },
   { path: 'team', component: SourcesComponent },
   { path: 'information', component: AboutComponent },
+  { path: 'information/brands', component: BrandsComponent },
   { path: '', redirectTo: '/start', pathMatch: 'full' },
   { path: '**', redirectTo: '/start' } // Handle 404 - Page not found
 ];
