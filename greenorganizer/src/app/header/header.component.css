@@ -10,9 +10,24 @@ a {
   font-family: "ABC Diatype", sans-serif;
 }
 
-/* Adjust the spacing for the brand/logo on mobile */
+/* Default styles for larger screens */
+@media (min-width: 769px) {
+  .navbar-brand {
+    margin-right: 5em; /* Adjust margin for desktop view */
+  }
+
+  .navbar-nav {
+    margin-left: auto; /* Right-align the navbar items on desktop */
+  }
+}
+
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .navbar-brand {
-    margin-right: 0; /* No margin on the right for the logo */
+    margin-right: 0; /* No margin on the right for the logo on mobile */
+  }
+
+  .navbar-nav {
+    margin-left: 0; /* Left-align the navbar items on mobile */
   }
 }
