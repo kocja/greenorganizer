@@ -10,12 +10,12 @@ import {BrandsComponent} from "./sources/brands/brands.component";
 const routes: Routes = [
   { path: 'start', component: StartComponent },
   { path: 'check', component: CheckComponent },
+  { path: '', component: CheckComponent },
   { path: 'calculate', component: CalculateComponent },
   { path: 'team', component: SourcesComponent },
   { path: 'information', component: AboutComponent },
   { path: 'information/brands', component: BrandsComponent },
-  { path: '', redirectTo: '/start', pathMatch: 'full' },
-  { path: '**', redirectTo: '/start' } // Handle 404 - Page not found
+  { path: '**', redirectTo: '/check' } // Handle 404 - Page not found
 ];
 
 @NgModule({

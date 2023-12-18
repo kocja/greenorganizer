@@ -6,7 +6,7 @@
   </div>
 </ng-container>
 
-  <ng-container *ngIf="closetLength >= 10">
+<ng-container *ngIf="closetLength > 10 && closetLength != 0">
   <div class="card rounded custom-card good">
     <div class="card-body">
       <h4 class="card-title">Dein Resultat</h4>
@@ -18,7 +18,7 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="closetLength >= 8 && closetLength <= 9">
+<ng-container *ngIf="closetLength >= 7.9 && closetLength <= 10">
   <div class="card rounded custom-card sufficient">
     <div class="card-body">
       <h4 class="card-title">Dein Resultat</h4>
@@ -30,7 +30,8 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="closetLength < 8 && closetLength != 0">
+  <ng-container *ngIf="closetLength <= 7.8 && closetLength != 0">
+
   <div class="card rounded custom-card bad">
     <div class="card-body">
       <h4 class="card-title">Dein Resultat</h4>

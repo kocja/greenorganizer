@@ -16,4 +16,5 @@ export class ResultComponent implements OnInit {
     this.closetLength = this.clothingService.calculateSustainabilityScore();
   }
 
+  protected readonly close = close;
 }
