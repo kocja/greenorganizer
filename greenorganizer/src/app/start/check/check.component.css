@@ -1,42 +1,27 @@
-
-
-.justify-content-center{
-  margin: 5em;
-}
-h1 {
-  font-family: "ABC Arizona Serif", serif;
-  font-weight: lighter;
-  font-size: 25px;
-  margin: 3em 0 0.5em 2em;
-  letter-spacing: 1.5px;
-}
-
-hr {
-  margin-right: 56.5em;
-  margin-left: 3em;
-}
-
-
-.fade-in-1 {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-.fade-in-2 {
-  opacity: 0;
-  animation: fadeIn 1.0s ease-in-out forwards;
-}
-
-.fade-in-3 {
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* Responsive styles for smaller screens */
+@media (max-width: 430px) {
+  .justify-content-center {
+    margin: 2em;
   }
-  to {
-    opacity: 1;
+
+  h1 {
+    font-size: 20px;
+    margin: 2em 1em 0.5em 1em; /* Adjusted margins */
+  }
+
+  hr {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  /* Stack items vertically */
+  .d-flex {
+    flex-direction: column;
+  }
+
+  /* Reset the flex property */
+  .flex-fill {
+    flex: 0 0 auto;
+    width: 100%; /* Ensure full width on smaller screens */
   }
 }

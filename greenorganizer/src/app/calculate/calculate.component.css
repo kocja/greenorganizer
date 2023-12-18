@@ -1,8 +1,30 @@
 .custom-card {
   height: 22em;
-  width: 20.5em;
-  margin: 3em;
+  width: calc(100% - 2em); /* Adjusted width to fill the page */
+  margin: 1em; /* Adjusted margin for smaller screens */
   background: #d6dccc;
   border-color: #d6dccc;
   font-family: "ABC Diatype", sans-serif;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 414px) {
+  .custom-card {
+    width: calc(100% - 1em); /* Adjusted width for iPhones including iPhone 14 */
+    margin: 0.5em; /* Adjusted margin for iPhones including iPhone 14 */
+  }
+}
+
+@media (max-width: 428px) {
+  .custom-card {
+    width: calc(100% - 1.5em); /* Adjusted width for iPhone 14 Pro Max and similar */
+    margin: 0.75em; /* Adjusted margin for iPhone 14 Pro Max and similar */
+  }
+}
+
+@media (max-width: 390px) {
+  .custom-card {
+    width: calc(100% - 1em); /* Adjusted width for iPhone 12 Pro and similar */
+    margin: 0.5em; /* Adjusted margin for iPhone 12 Pro and similar */
+  }
 }

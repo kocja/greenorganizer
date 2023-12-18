@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .custom-card {
   width: 400px;
   margin: 3em;
@@ -35,4 +36,17 @@ img {
 
 .bad a {
   color: darkred;
+}
+
+/* Responsive styles for iPhone 14 */
+@media (max-width: 430px) {
+  .custom-card {
+    width: calc(100% - 2em); /* Adjusted width to fill the page */
+    margin: 1em; /* Adjusted margin for smaller screens */
+  }
+
+  img {
+    margin-left: 0 !important;
+    width: 300px;
+  }
 }
